@@ -1,28 +1,28 @@
 # @milkdown/react
 
-React integration for [milkdown](https://saul-mirone.github.io/milkdown/).
+Angular integration for [milkdown](https://saul-mirone.github.io/milkdown/).
+
+
+# Install
+
+```bash
+yarn add @milkdown/core @milkdown/plugin-listener @milkdown/plugin-menu @milkdown/preset-commonmark @milkdown/preset-gfm @milkdown/prose @milkdown/theme-nord
+```
 
 # Example Usage
 
 ```typescript
-import React from 'react';
-import { Editor, rootCtx } from '@milkdown/core';
-import { ReactEditor, useEditor } from '@milkdown/react';
-import { commonmark } from '@milkdown/preset-commonmark';
-import { nord } from '@milkdown/theme-nord';
+@NgModule({
+  imports: [
+    MilkdownModule,
+  ],
+})
+```
 
-export const MilkdownEditor: React.FC = () => {
-    const editor = useEditor((root) =>
-        Editor.make()
-            .config((ctx) => {
-                ctx.set(rootCtx, root);
-            })
-            .use(nord)
-            .use(commonmark),
-    );
-
-    return <ReactEditor editor={editor} />;
-};
+```html
+ <milkdown-editor [(ngModel)]="markdown"></milkdown-editor>
+ <!-- or -->
+ <milkdown-editor formControlName="markdown"></milkdown-editor>
 ```
 
 # License
