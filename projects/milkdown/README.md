@@ -1,24 +1,30 @@
-# Milkdown
+# @milkdown/react
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+React integration for [milkdown](https://saul-mirone.github.io/milkdown/).
 
-## Code scaffolding
+# Example Usage
 
-Run `ng generate component component-name --project milkdown` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project milkdown`.
-> Note: Don't forget to add `--project milkdown` or else it will be added to the default project in your `angular.json` file. 
+```typescript
+import React from 'react';
+import { Editor, rootCtx } from '@milkdown/core';
+import { ReactEditor, useEditor } from '@milkdown/react';
+import { commonmark } from '@milkdown/preset-commonmark';
+import { nord } from '@milkdown/theme-nord';
 
-## Build
+export const MilkdownEditor: React.FC = () => {
+    const editor = useEditor((root) =>
+        Editor.make()
+            .config((ctx) => {
+                ctx.set(rootCtx, root);
+            })
+            .use(nord)
+            .use(commonmark),
+    );
 
-Run `ng build milkdown` to build the project. The build artifacts will be stored in the `dist/` directory.
+    return <ReactEditor editor={editor} />;
+};
+```
 
-## Publishing
+# License
 
-After building your library with `ng build milkdown`, go to the dist folder `cd dist/milkdown` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test milkdown` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Milkdown is open sourced software licensed under [MIT license](https://github.com/Saul-Mirone/milkdown/blob/main/LICENSE).

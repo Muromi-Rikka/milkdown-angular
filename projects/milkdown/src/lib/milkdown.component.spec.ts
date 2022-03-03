@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MilkdownComponent } from './milkdown.component';
+import { MilkdownComponent } from "./milkdown.component";
 
-describe('MilkdownComponent', () => {
+describe("MilkdownComponent", () => {
   let component: MilkdownComponent;
   let fixture: ComponentFixture<MilkdownComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MilkdownComponent ]
-    })
-    .compileComponents();
+      declarations: [MilkdownComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('MilkdownComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
