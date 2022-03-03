@@ -1,9 +1,16 @@
 {
-  "name": "milkdown",
+  "name": "@star-dancer/milkdown",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0"
+    "@angular/core": "^13.2.0",
+    "@milkdown/core": "^5.5.0",
+    "@milkdown/plugin-listener": "^5.5.0",
+    "@milkdown/plugin-menu": "^5.5.0",
+    "@milkdown/preset-commonmark": "^5.5.0",
+    "@milkdown/preset-gfm": "^5.5.0",
+    "@milkdown/prose": "^5.5.0",
+    "@milkdown/theme-nord": "^5.5.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

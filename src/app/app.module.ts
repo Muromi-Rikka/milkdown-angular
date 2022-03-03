@@ -1,13 +1,12 @@
 import { NgModule } from "@angular/core";
-import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
-import { MilkdownModule } from "projects/milkdown/src/public-api";
 
 import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, MilkdownModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

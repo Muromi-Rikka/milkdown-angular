@@ -1,0 +1,11 @@
+<div>
+  <form [formGroup]="form">
+    <div style="width: 500px; height: 200px">
+      <milkdown-editor formControlName="markdown"></milkdown-editor>
+    </div>
+  </form>
+  <div>
+    <span>is valid:</span>
+    <span>{{ form.valid }}</span>
+  </div>
+</div>

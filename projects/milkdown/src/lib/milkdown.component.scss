@@ -19,6 +19,7 @@
   ::ng-deep {
     @import "material-icons/iconfont/outlined.scss";
     .milkdown-menu-wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       height: 100%;

@@ -1,14 +1,7 @@
-<div style="width: 400px; height: 400px">
-  <!-- <milkdown-editor [(ngModel)]="title"></milkdown-editor> -->
+<div>
+  <button routerLink="reactive">reactive form</button>
+  <button routerLink="custom">ng model</button>
 </div>
 <div>
-  <form [formGroup]="form" (ngSubmit)="handleClickSubmit()">
-    <div style="width: 600px; height: 500px">
-      <milkdown-editor formControlName="content"></milkdown-editor>
-    </div>
-    <button type="submit">submit</button>
-  </form>
+  <router-outlet></router-outlet>
 </div>
-<pre>
-  {{ title }}
-</pre>
